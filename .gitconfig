@@ -1,0 +1,21 @@
+[user]
+	name = Kolja Schneider\n\n\n
+	email = kolja.schneider@solectrix.de
+[core]
+	pager = less -x4
+
+[sendemail]
+	to = ralf.truebenbach@solectrix.de
+	cc = kolja.schneider@solectrix.de
+	from = "kolja.schneider@solectrix.de"
+	confirm = never
+[alias]
+	up = rebase trunk-sx
+	st = status -uno
+	ci = commit
+[merge]
+	tool = meld
+[rebase]
+	autostash = true
+[push]
+	default = simple
