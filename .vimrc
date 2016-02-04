@@ -11,6 +11,9 @@ Plug 'bling/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'tpope/vim-fugitive'
+Plug 'altercation/vim-colors-solarized'
+Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/histwin.vim'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
