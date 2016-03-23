@@ -67,33 +67,38 @@ nmap <C-l> :cd %:p:h<CR> " cd to directory of current buffer
 map <C-d> o<Esc>p  " paste unnamed register into new line
 map <F3> :UndotreeToggle<CR>
 
+nmap <Right> :GitGutterStageHunk
+nmap <Left> :GitGutterRevertHunk
+nmap <C-p> :GitGutterPreviewHunk
+nmap <C-x> :pclose<Cr>
+nmap cc :Gcommit<Cr>
+nmap ca :Gcommit --amend<Cr>
 
 function! Up()
 	if &diff
 		normal [c
 	else
-		try
-			exe "bo ptag " . expand("<cword>")
-		catch
-			"go to definition instead"
-			normal gD
-		endtry
+		exe "GitGutterPrevHunk"
 	endif
 endfunction
 function! Down()
 	if &diff
 		normal ]c
 	else
-		exe "pclose"
+		exe "GitGutterNextHunk"
 	endif
 endfunction
 
 " in diff mode, map the <C-up/down) arrow keys to select the next change
 " in normal mode, show symbol definition of word under the cursor in preview window
-nmap <C-Up> :call Up()<CR>
-nmap <C-Down> :call Down()<CR>
-nmap <Left> :ptprevious<CR>
-nmap <Right> :ptnext<CR>
+nmap <Up> :call Up()<CR>
+nmap <Down> :call Down()<CR>
+
+nmap <C-Left> <C-w><Left>
+nmap <C-Right> <C-w><Right>
+nmap <C-Up> <C-w><Up>
+nmap <C-Down> <C-w><Down>
+nmap <C-c> <C-w>o
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
@@ -124,12 +129,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_min_count = 1
 
-" map arrow keys to jump to modified hunk
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-nmap <Down> <Plug>GitGutterNextHunk
-nmap <Up> <Plug>GitGutterPrevHunk
-
+let g:gitgutter_highlight_lines = 1
 
 "emacs inspired incsearch
 cmap <C-right> <Cr>gn
