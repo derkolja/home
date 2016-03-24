@@ -93,6 +93,12 @@ endfunction
 nmap <Up> :call Up()<CR>
 nmap <Down> :call Down()<CR>
 
+" mappings for screen
+nmap [1;5D <C-w><Left>
+nmap [1;5C <C-w><Right>
+nmap [1;5A <C-w><Up>
+nmap [1;5B <C-w><Down>
+" default mappings
 nmap <C-Left> <C-w><Left>
 nmap <C-Right> <C-w><Right>
 nmap <C-Up> <C-w><Up>
