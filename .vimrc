@@ -14,6 +14,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/histwin.vim'
 Plug 'rking/ag.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
