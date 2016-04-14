@@ -124,3 +124,5 @@ PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 "
 stty -ixon
 . ~/util/git-prompt.bash
 . ~/util/git-completion.bash
+. /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+export WORKON_HOME=/home/kschneider/Envs/
