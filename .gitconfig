@@ -13,6 +13,8 @@
 	up = rebase trunk-sx
 	st = status -uno
 	ci = commit
+	lg = log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+
 [merge]
 	tool = meld
 [rebase]
