@@ -13,6 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/histwin.vim'
+Plug 'rking/ag.vim'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
