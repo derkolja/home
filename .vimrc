@@ -69,7 +69,7 @@ map <C-d> o<Esc>p  " paste unnamed register into new line
 map <F3> :UndotreeToggle<CR>
 
 nmap <Right> :GitGutterStageHunk
-nmap <Left> :GitGutterRevertHunk
+nmap <Left> :GitGutterUndoHunk
 nmap <C-p> :GitGutterPreviewHunk
 nmap <C-x> :pclose<Cr>
 nmap cc :Gcommit<Cr>
