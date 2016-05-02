@@ -59,8 +59,8 @@ se undofile
 se undodir=/home/kolja/.vim/undo/
 
 colorscheme solarized
-highlight ExtraWhitespace ctermbg=lightred
-autocmd WinEnter * call matchadd("ExtraWhitespace", '\s\+$\| \+\ze\t')
+highlight ExtraWhitespace ctermbg=13
+autocmd BufReadPost * call matchadd("ExtraWhitespace", '\s\+$\| \+\ze\t')
 
 
 nmap <C-l> :cd %:p:h<CR> " cd to directory of current buffer
