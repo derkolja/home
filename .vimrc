@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/histwin.vim'
 Plug 'rking/ag.vim'
 Plug 'ervandew/supertab'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
@@ -151,3 +152,9 @@ guioptions=ac
 endif
 
 abbr pritn print
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
