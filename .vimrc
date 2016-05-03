@@ -3,7 +3,7 @@ autocmd!
 set t_Co=256
 filetype off " Pathogen needs to run before plugin indent on
 
-call plug#begin('~/vim/plugged')
+call plug#begin('~/.vim/plugged')
 let $GIT_SSL_NO_VERIFY = 'true'
 "let g:plug_url_format = 'git@github.com:%s.git'
 Plug 'bling/vim-airline'
