@@ -1,14 +1,9 @@
 [user]
+	email = kolja.schneider@gmail.com
 	name = Kolja Schneider
-	email = kolja.schneider@solectrix.de
 [core]
 	pager = less -x4
 
-[sendemail]
-	to = ralf.truebenbach@solectrix.de
-	cc = kolja.schneider@solectrix.de
-	from = "kolja.schneider@solectrix.de"
-	confirm = never
 [alias]
 	up = rebase trunk-sx
 	st = status -uno
