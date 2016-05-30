@@ -49,6 +49,8 @@ se splitbelow " on :spl, select lower buffer
 se backspace=2
 se noswapfile " disable swap files
 se cinoptions=(0: " indent broken lines to match with the last open bracket
+se diffopt=vertical
+se nofoldenable
 
 
 se scrolloff=5 "when scrolling,leave a scroll offset of 5 lines
