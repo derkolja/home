@@ -1,5 +1,6 @@
 autocmd!
 
+
 set t_Co=256
 filetype off " Pathogen needs to run before plugin indent on
 
@@ -59,7 +60,7 @@ map <F9> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q <CR>
 map <F12> :nohl<CR>
 
 se undofile
-se undodir=/home/kolja/.vim/undo/
+se undodir=~/.vim/undo/
 
 colorscheme solarized
 highlight ExtraWhitespace ctermbg=13
