@@ -113,5 +113,5 @@ GIT_PROMPT_START=${Cyan}\\w${ResetColor}
 GIT_PROMPT_END=${BrightBlack}' $ '${ResetColor}
 
 export EDITOR=vim
-cond_source .bashrc-$(hostname)
+cond_source ~/.bashrc-$(hostname)
 
