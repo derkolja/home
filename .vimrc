@@ -17,6 +17,7 @@ Plug 'chrisbra/histwin.vim'
 Plug 'rking/ag.vim'
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
