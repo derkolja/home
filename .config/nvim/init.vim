@@ -124,6 +124,9 @@ let g:VCSCommandResultBufferNameExtension=".vcs"
 "deal with syntax highlight in diff mode, not needed with solarized YAY!!
 "autocmd BufEnter *.vcs syn off
 "nmap <C-x> :bd:syn on
+"
+" search for word under cursor
+nnoremap S :Ag <C-r><C-w><Cr>
 
 let g:airline_symbols = {}
 " unicode symbols
