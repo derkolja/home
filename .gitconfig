@@ -14,7 +14,7 @@
 	st = status -uno
 	ci = commit
 	ld = log --decorate
-	lg = log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+	lg = log --graph --pretty='%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
 	reabse = rebase
 	brnach = branch
 
