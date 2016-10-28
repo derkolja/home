@@ -1,0 +1,8 @@
+#export http_proxy=http://proxy:8080
+#export ftp_proxy=ftp://proxy:8080
+#xport https_proxy=http://proxy:8080
+export PATH=$PATH:~/util/
+export LANG=en_US.UTF-8
+
+GIT_PROMPT_START=${BoldWhite}${BoldBrownBg}\\h:${Green}\ \\w${ResetColor}
+GIT_PROMPT_END=${BrightBlack}' $ '${ResetColor}
