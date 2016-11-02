@@ -2,7 +2,7 @@ autocmd!
 
 
 set t_Co=256
-filetype off " Pathogen needs to run before plugin indent on
+filetype off
 
 call plug#begin('~/.vim/plugged')
 let $GIT_SSL_NO_VERIFY = 'true'
