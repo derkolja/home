@@ -119,12 +119,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 command! -range Beautify <line1>,<line2>s/\s\+$//g
 
 
-let g:VCSCommandDeleteOnHide=1
-let g:VCSCommandResultBufferNameExtension=".vcs"
-"deal with syntax highlight in diff mode, not needed with solarized YAY!!
-"autocmd BufEnter *.vcs syn off
-"nmap <C-x> :bd:syn on
-"
 " search for word under cursor
 nnoremap S :Ag <C-r><C-w><Cr>
 
