@@ -160,3 +160,10 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+nmap gn :cn<Cr>
+nmap gp :cp<Cr>
+
+command! -nargs=* Log Glog -n 100 -- <args>
+
+
