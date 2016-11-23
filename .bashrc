@@ -101,6 +101,7 @@ function cond_source {
 cond_source ~/util/git-prompt.bash
 cond_source ~/util/git-completion.bash
 cond_source /usr/bin/virtualenvwrapper.sh
+cond_source ~/util/activate-global-python-argcomplete
 export WORKON_HOME=/home/kschneider/Envs/
 
 stty -ixon # why?
