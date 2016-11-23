@@ -2,7 +2,7 @@ autocmd!
 
 
 set t_Co=256
-filetype off
+filetype off " Pathogen needs to run before plugin indent on
 
 call plug#begin('~/.vim/plugged')
 let $GIT_SSL_NO_VERIFY = 'true'
@@ -118,11 +118,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 command! -range Beautify <line1>,<line2>s/\s\+$//g
 
 
-let g:VCSCommandDeleteOnHide=1
-let g:VCSCommandResultBufferNameExtension=".vcs"
-"deal with syntax highlight in diff mode, not needed with solarized YAY!!
-"autocmd BufEnter *.vcs syn off
-"nmap <C-x> :bd:syn on
+" search for word under cursor
+nnoremap S :Ag <C-r><C-w><Cr>
 
 let g:airline_symbols = {}
 " unicode symbols
@@ -162,3 +159,10 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+nmap gn :cn<Cr>
+nmap gp :cp<Cr>
+
+command! -nargs=* Log Glog -n 100 -- <args>
+
+
