@@ -118,6 +118,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 "clean up eol spaces
 command! -range Beautify <line1>,<line2>s/\s\+$//g
 
+" write as root
+command! XX w !sudo tee % > /dev/null
+
 
 " search for word under cursor
 nnoremap S :Ag <C-r><C-w><Cr>
