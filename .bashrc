@@ -99,7 +99,6 @@ function cond_source {
   fi
 }
 
-cond_source ~/util/git-prompt.bash
 cond_source ~/util/git-completion.bash
 cond_source /usr/bin/virtualenvwrapper.sh
 cond_source ~/util/activate-global-python-argcomplete
@@ -108,12 +107,12 @@ export WORKON_HOME=/home/kschneider/Envs/
 stty -ixon # why?
 
 GIT_PROMPT_SHOW_UNTRACKED_FILES=no
-GIT_PROMPT_THEME=Solarized
+GIT_PROMPT_THEME=Custom
+cond_source ~/util/git-prompt.bash
 cond_source ~/util/bash-git-prompt/gitprompt.sh
 cond_source ~/util/bash-git-prompt/prompt-colors.sh
-GIT_PROMPT_START=${Cyan}\\w${ResetColor}
-GIT_PROMPT_END=${BrightBlack}' $ '${ResetColor}
 
 export EDITOR=vim
 cond_source ~/.bashrc-$(hostname)
 
+export GIT_PROMPT_IGNORE_STASH="1"
