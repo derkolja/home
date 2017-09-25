@@ -4,8 +4,6 @@ export PATH=$PATH:~/util
 export LANG=
 export https_proxy=http://proxy.simp.solectrix.de:3128
 
-alias miniscreen='sudo su solectrix -c "script /dev/null -c \"screen -x minicom\" "'
-
 export LC_ALL=en_US.UTF-8
 
 GIT_PROMPT_START=${BoldBlack}${BoldMagentaBg}\\h:${Green}\ \\w${ResetColor}
