@@ -1,8 +1,8 @@
-export http_proxy=http://proxy:8080
-export ftp_proxy=ftp://proxy:8080
-export https_proxy=http://proxy:8080
+export http_proxy=http://proxy.simp.solectrix.de:3128
+export ftp_proxy=ftp://proxy.simp.solectrix.de:3128
 export PATH=$PATH:~/util/
 export LANG=en_US.UTF-8
+export https_proxy=http://proxy.simp.solectrix.de:3128
 
 GIT_PROMPT_START=${BoldWhite}${BoldBrownBg}\\h:${Green}\ \\w${ResetColor}
 GIT_PROMPT_END=${BrightBlack}' $ '${ResetColor}
