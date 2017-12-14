@@ -18,6 +18,7 @@ Plug 'rking/ag.vim'
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-scripts/taglist.vim'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
@@ -107,10 +108,10 @@ nmap [1;5C <C-w><Right>
 nmap [1;5A <C-w><Up>
 nmap [1;5B <C-w><Down>
 " default mappings
-nmap <C-Left> <C-w><Left>
-nmap <C-Right> <C-w><Right>
-nmap <C-Up> <C-w><Up>
-nmap <C-Down> <C-w><Down>
+nmap <C-Left> :TmuxNavigateLeft<cr>
+nmap <C-Right> :TmuxNavigateRight<cr>
+nmap <C-Up> :TmuxNavigateUp<cr>
+nmap <C-Down> :TmuxNavigateDown<cr>
 nmap <C-c> <C-w>o
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
