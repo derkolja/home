@@ -117,3 +117,4 @@ export EDITOR=vim
 cond_source ~/.bashrc-$(hostname)
 
 export GIT_PROMPT_IGNORE_STASH="1"
+alias ignoreme='echo GIT_PROMPT_IGNORE=1 > .bash-git-rc'
