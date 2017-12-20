@@ -171,3 +171,4 @@ nmap gp :cp<Cr>
 command! -nargs=* Log Glog -n 100 -- <args>
 
 
+set viminfo+=n~/.vim/viminfo
