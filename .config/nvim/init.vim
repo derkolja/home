@@ -69,6 +69,7 @@ colorscheme solarized
 highlight ExtraWhitespace ctermbg=13
 autocmd BufReadPost * call matchadd("ExtraWhitespace", '\s\+$\| \+\ze\t')
 
+let g:tmux_navigator_no_mappings = 1
 
 nmap <C-l> :cd %:p:h<CR> " cd to directory of current buffer
 
@@ -102,16 +103,11 @@ endfunction
 nmap <Up> :call Up()<CR>
 nmap <Down> :call Down()<CR>
 
-" mappings for screen
-nmap [1;5D <C-w><Left>
-nmap [1;5C <C-w><Right>
-nmap [1;5A <C-w><Up>
-nmap [1;5B <C-w><Down>
 " default mappings
-nmap <C-Left> :TmuxNavigateLeft<cr>
-nmap <C-Right> :TmuxNavigateRight<cr>
-nmap <C-Up> :TmuxNavigateUp<cr>
-nmap <C-Down> :TmuxNavigateDown<cr>
+nmap <M-Left> :TmuxNavigateLeft<cr>
+nmap <M-Right> :TmuxNavigateRight<cr>
+nmap <M-Up> :TmuxNavigateUp<cr>
+nmap <M-Down> :TmuxNavigateDown<cr>
 nmap <C-c> <C-w>o
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
