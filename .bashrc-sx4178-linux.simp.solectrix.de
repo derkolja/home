@@ -1,8 +1,8 @@
-export http_proxy=http://proxy.simp.solectrix.de:3128
-export ftp_proxy=ftp://proxy.simp.solectrix.de:3128
+export http_proxy=http://proxy.simpsons.solectrix.de:3128
+export ftp_proxy=ftp://proxy.simpsons.solectrix.de:3128
 export PATH=$PATH:~/util/
 export LANG=en_US.UTF-8
-export https_proxy=http://proxy.simp.solectrix.de:3128
+export https_proxy=http://proxy.simpsons.solectrix.de:3128
 
 
 export NET_CONTROL_IP=192.168.227.122
