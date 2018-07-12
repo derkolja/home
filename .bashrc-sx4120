@@ -8,3 +8,5 @@ export LC_ALL=en_US.UTF-8
 
 GIT_PROMPT_START=${BoldBlack}${BoldMagentaBg}\\h:${Green}\ \\w${ResetColor}
 GIT_PROMPT_END=${BrightBlack}' $ '${ResetColor}
+
+alias kill_testscript='ps aux |grep "python ./testscript"|grep -v grep | awk '"'"'{print $2}'"'"' |xargs sudo kill -9 '
