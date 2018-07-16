@@ -6,3 +6,4 @@ export https_proxy=http://proxy.simpsons.solectrix.de:3128
 
 
 export NET_CONTROL_IP=192.168.227.122
+export BR2_DL_DIR=~/.cache/buildroot-dl
