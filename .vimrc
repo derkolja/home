@@ -42,6 +42,7 @@ se completeopt=longest,menu
 se hidden " allow switching from modified buffers
 se tabstop=4
 se sw=4
+se noet
 se ignorecase " with smartcase and ignorecase enabled, searches are case sensitive if at least one upper letter is used
 se smartcase
 se tw=80
@@ -52,7 +53,7 @@ se splitright " on :vspl, select right buffer
 se splitbelow " on :spl, select lower buffer
 se backspace=2
 se noswapfile " disable swap files
-se cinoptions=(0: " indent broken lines to match with the last open bracket
+se cinoptions=g0(0: " indent broken lines to match with the last open bracket, class labels with indent 0
 se diffopt=vertical
 se nofoldenable
 
@@ -69,6 +70,7 @@ colorscheme solarized
 highlight ExtraWhitespace ctermbg=13
 autocmd BufReadPost * call matchadd("ExtraWhitespace", '\s\+$\| \+\ze\t')
 
+let g:tmux_navigator_no_mappings = 1
 
 nmap <C-l> :cd %:p:h<CR> " cd to directory of current buffer
 
@@ -102,22 +104,20 @@ endfunction
 nmap <Up> :call Up()<CR>
 nmap <Down> :call Down()<CR>
 
-" mappings for screen
-nmap [1;5D <C-w><Left>
-nmap [1;5C <C-w><Right>
-nmap [1;5A <C-w><Up>
-nmap [1;5B <C-w><Down>
 " default mappings
-nmap <C-Left> <C-w><Left>
-nmap <C-Right> <C-w><Right>
-nmap <C-Up> <C-w><Up>
-nmap <C-Down> <C-w><Down>
+nmap [1;3D :TmuxNavigateLeft<cr>
+nmap [1;3C :TmuxNavigateRight<cr>
+nmap [1;3A :TmuxNavigateUp<cr>
+nmap [1;3B :TmuxNavigateDown<cr>
 nmap <C-c> <C-w>o
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 "clean up eol spaces
 command! -range Beautify <line1>,<line2>s/\s\+$//g
+
+" write as root
+command! XX w !sudo tee % > /dev/null
 
 
 " search for word under cursor
