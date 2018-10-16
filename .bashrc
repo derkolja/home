@@ -72,6 +72,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias arch-orphan='sudo pacman -Rns $(pacman -Qtdq)'
+alias up='git remote update -p'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
