@@ -12,6 +12,7 @@ Plug 'mbbill/undotree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-sleuth'
 Plug 'altercation/vim-colors-solarized'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/histwin.vim'
@@ -20,6 +21,8 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-scripts/taglist.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vimjas/vim-python-pep8-indent'
+Plug 'w0rp/ale'
 call plug#end()
 " Plug 'tpope/vim-sensible'
 
@@ -105,10 +108,10 @@ nmap <Up> :call Up()<CR>
 nmap <Down> :call Down()<CR>
 
 " default mappings
-nmap [1;3D :TmuxNavigateLeft<cr>
-nmap [1;3C :TmuxNavigateRight<cr>
-nmap [1;3A :TmuxNavigateUp<cr>
-nmap [1;3B :TmuxNavigateDown<cr>
+nmap <M-Left> :TmuxNavigateLeft<cr>
+nmap <M-Right> :TmuxNavigateRight<cr>
+nmap <M-Up> :TmuxNavigateUp<cr>
+nmap <M-Down> :TmuxNavigateDown<cr>
 nmap <C-c> <C-w>o
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -148,6 +151,8 @@ let g:gitgutter_highlight_lines = 0
 cmap <C-right> <Cr>gn
 vmap <C-right> "xy<Esc>/<C-r>x
 
+cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
+
 if has("gui_runnning")
 gfn=Monaco\ 9
 toolbar=
@@ -168,3 +173,4 @@ nmap gp :cp<Cr>
 command! -nargs=* Log Glog -n 100 -- <args>
 
 
+set viminfo+=n~/.vim/viminfo
