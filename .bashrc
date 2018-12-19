@@ -100,7 +100,7 @@ function cond_source {
   fi
 }
 
-cond_source ~/util/git-completion.bash
+cond_source /usr/share/git/completion/git-completion.bash
 cond_source /usr/bin/virtualenvwrapper.sh
 cond_source ~/util/activate-global-python-argcomplete
 export WORKON_HOME=/home/kschneider/Envs/
