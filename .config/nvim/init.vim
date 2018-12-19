@@ -148,6 +148,8 @@ let g:gitgutter_highlight_lines = 0
 cmap <C-right> <Cr>gn
 vmap <C-right> "xy<Esc>/<C-r>x
 
+cnoremap <expr> X (getcmdtype() is# ':' && empty(getcmdline())) ? 'x' : 'X'
+
 if has("gui_runnning")
 gfn=Monaco\ 9
 toolbar=
