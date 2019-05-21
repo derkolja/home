@@ -1,0 +1,5 @@
+export PATH=~/util/:$PATH
+export LANG=en_US.UTF-8
+
+export NET_CONTROL_IP=net-control-ks
+export BR2_DL_DIR=~/.cache/buildroot-dl
