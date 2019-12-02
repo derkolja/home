@@ -3,6 +3,7 @@
 	email = kolja.schneider@solectrix.de
 [core]
 	pager = less -x4
+	editor = nvim
 
 [sendemail]
 	to = ralf.truebenbach@solectrix.de
