@@ -62,7 +62,7 @@ se nofoldenable
 
 
 se scrolloff=5 "when scrolling,leave a scroll offset of 5 lines
-map <F9> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q <CR>
+map <F9> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q <CR>
 
 map <F12> :nohl<CR>
 
