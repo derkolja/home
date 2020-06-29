@@ -176,5 +176,17 @@ nmap gp :cp<Cr>
 
 command! -nargs=* Log Glog -n 100 -- <args>
 
+function! Solar_swap()
+    if &background ==? 'dark'
+        set background=light
+        execute "silent !tmux source-file " . shellescape(expand('~/.tmux/plugons/tmux-colors-solarized/tmuxcolors-light.conf'))
+    else
+        set background=dark
+        execute "silent !tmux source-file " . shellescape(expand('~/.tmux/plugons/tmux-colors-solarized/tmuxcolors-dark.conf'))
+    endif
+    "silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'
+endfunction
+
+command! SolarSwap call Solar_swap()
 
 set viminfo+=n~/.vim/viminfo
