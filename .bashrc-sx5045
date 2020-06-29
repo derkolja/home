@@ -1,0 +1,17 @@
+if [ $(gsettings get org.gnome.system.proxy mode ) == \'none\' ] ; then
+	export http_proxy=
+	export https_proxy=
+else
+	host=$(gsettings get org.gnome.system.proxy.http host)
+	port=$(gsettings get org.gnome.system.proxy.http port)
+	proxy=$(echo $host | sed "s/'//g"):$port
+	export http_proxy=http://$proxy
+	export https_proxy=http://$proxy
+
+fi
+export PATH=~/util/:$PATH
+export LANG=en_US.UTF-8
+
+export NET_CONTROL_IP=net-control-ks
+export BR2_DL_DIR=~/.cache/buildroot-dl
+alias uart_local='socat2  -,raw,echo=0,escape=0x0f TCP:192.168.227.71:8080'

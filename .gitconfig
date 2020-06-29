@@ -3,6 +3,8 @@
 	email = kolja.schneider@solectrix.de
 [core]
 	pager = less -x4
+	editor = nvim
+	excludesfile = /home/kschneider/.config/gitignore
 
 [sendemail]
 	to = ralf.truebenbach@solectrix.de

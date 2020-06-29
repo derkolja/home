@@ -62,7 +62,7 @@ se nofoldenable
 
 
 se scrolloff=5 "when scrolling,leave a scroll offset of 5 lines
-map <F9> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q <CR>
+map <F9> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q <CR>
 
 map <F12> :nohl<CR>
 
@@ -146,6 +146,10 @@ let g:airline#extensions#tabline#buffer_min_count = 1
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_highlight_lines = 0
+highlight! link SignColumn LineNr
+let g:gitgutter_set_sign_backgrounds=1
+
+set clipboard=unnamedplus
 
 "emacs inspired incsearch
 cmap <C-right> <Cr>gn
@@ -172,5 +176,17 @@ nmap gp :cp<Cr>
 
 command! -nargs=* Log Glog -n 100 -- <args>
 
+function! Solar_swap()
+    if &background ==? 'dark'
+        set background=light
+        execute "silent !tmux source-file " . shellescape(expand('~/.tmux/plugons/tmux-colors-solarized/tmuxcolors-light.conf'))
+    else
+        set background=dark
+        execute "silent !tmux source-file " . shellescape(expand('~/.tmux/plugons/tmux-colors-solarized/tmuxcolors-dark.conf'))
+    endif
+    "silent !osascript -e 'tell app "System Events" to keystroke "s" using {shift down, option down, control down}'
+endfunction
+
+command! SolarSwap call Solar_swap()
 
 set viminfo+=n~/.vim/viminfo
