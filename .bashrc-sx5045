@@ -14,4 +14,4 @@ export LANG=en_US.UTF-8
 
 export NET_CONTROL_IP=net-control-ks
 export BR2_DL_DIR=~/.cache/buildroot-dl
-alias uart_local='socat2  -,raw,echo=0,escape=0x0f TCP:192.168.227.160:8080'
+alias uart_local='socat2  -,raw,echo=0,escape=0x0f TCP:192.168.227.71:8080'
