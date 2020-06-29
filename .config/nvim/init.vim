@@ -149,6 +149,8 @@ let g:gitgutter_highlight_lines = 0
 highlight! link SignColumn LineNr
 let g:gitgutter_set_sign_backgrounds=1
 
+set clipboard=unnamedplus
+
 "emacs inspired incsearch
 cmap <C-right> <Cr>gn
 vmap <C-right> "xy<Esc>/<C-r>x
