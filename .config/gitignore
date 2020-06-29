@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+*.pyc
+Session.vim
+tags
+.metadata
+SDK.log
+RemoteSystemsTempFiles
